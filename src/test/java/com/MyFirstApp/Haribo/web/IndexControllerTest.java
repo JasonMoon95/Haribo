@@ -1,6 +1,7 @@
 package com.MyFirstApp.Haribo.web;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class IndexControllerTest {
+public class IndexControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;

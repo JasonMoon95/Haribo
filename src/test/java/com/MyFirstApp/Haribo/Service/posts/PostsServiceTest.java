@@ -13,11 +13,14 @@ import com.MyFirstApp.Haribo.domain.posts.Posts;
 import com.MyFirstApp.Haribo.domain.posts.PostsRepository;
 import com.MyFirstApp.Haribo.web.dto.PostsSaveRequestDto;
 import com.MyFirstApp.Haribo.web.dto.PostsUpdateRequestDto;
+import org.junit.Before;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @ExtendWith(MockitoExtension.class)
 public class PostsServiceTest {
@@ -27,9 +30,10 @@ public class PostsServiceTest {
 
     PostsService postsService;
 
-    @BeforeEach
+    @Before
     public void setUp() {
-        PostsService postsService = new PostsService(postsRepository);
+        MockitoAnnotations.openMocks(this);
+        postsService = new PostsService(postsRepository);
     }
 
 //    @Test
@@ -54,8 +58,6 @@ public class PostsServiceTest {
     @Test
     public void update() {
         // given
-        PostsService postsService = new PostsService(postsRepository);
-
         PostsUpdateRequestDto requestDto2 = PostsUpdateRequestDto.builder()
                 .title("titleTest2")
                 .content("contentTest2")

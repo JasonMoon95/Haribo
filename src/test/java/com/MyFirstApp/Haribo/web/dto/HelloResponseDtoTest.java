@@ -1,11 +1,11 @@
 package com.MyFirstApp.Haribo.web.dto;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-class HelloResponseDtoTest {
+public class HelloResponseDtoTest {
 
     @Test
     public void 롬복_기능_테스트(){

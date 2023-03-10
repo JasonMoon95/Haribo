@@ -1,7 +1,7 @@
 package com.MyFirstApp.Haribo.web;
 
 import com.MyFirstApp.Haribo.config.auth.SecurityConfig;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -24,7 +24,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(controllers = HelloController.class, excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)})
-class HelloControllerTest {
+public class HelloControllerTest {
     @Autowired
     private MockMvc mvc;
 

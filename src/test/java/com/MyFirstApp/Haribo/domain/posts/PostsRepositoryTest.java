@@ -2,7 +2,7 @@ package com.MyFirstApp.Haribo.domain.posts;
 
 import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import org.junit.After;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-class PostsRepositoryTest {
+public class PostsRepositoryTest {
 
     @Autowired
     PostsRepository postsRepository;
