@@ -4,7 +4,7 @@ jdk:
 
 branches:
   only:
-    - master
+    - main
 
 # Travsi CI 서버의 Home
 cache:
