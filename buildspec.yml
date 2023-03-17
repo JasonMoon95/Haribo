@@ -11,6 +11,7 @@ phases:
       - pwd
 artifacts:
   files:
+    - appspec.yml
     - build/libs/*.jar
   discard-paths: yes
 cache:
