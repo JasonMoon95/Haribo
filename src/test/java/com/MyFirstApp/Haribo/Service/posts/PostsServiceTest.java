@@ -45,8 +45,8 @@ public class PostsServiceTest {
 //                .content("content")
 //                .author("author")
 //                .build();
-//        when(postsRepository.save(requestDto.toEntity())).
-//                thenReturn(Posts.builder().title("abc").author("seungje").content("abcdefg!").build());
+//        when(postsRepository.save(any(Posts.class))).
+//                thenReturn(Posts.builder().title("title").author("content").content("author").build());
 //
 //        // when
 //        Long id = postsService.save(requestDto);
