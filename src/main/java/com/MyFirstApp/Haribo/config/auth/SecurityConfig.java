@@ -52,7 +52,7 @@ public class SecurityConfig {
         http.csrf().disable();
         http.headers().frameOptions().disable();
         http.authorizeHttpRequests(authorize->authorize
-                    .requestMatchers("/", "/h2-console/**", "/css/**", "/images/**", "/js/**",  "/profile").permitAll()
+                    .requestMatchers("/", "/h2-console/**", "/css/**", "/images/**", "/js/**",  "/profile", "/posts/detail/**").permitAll()
                     .requestMatchers("/api/v1/**").hasRole(Role.USER.name())
                     .anyRequest().authenticated().and()
                 )
